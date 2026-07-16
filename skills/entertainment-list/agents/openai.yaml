@@ -1,0 +1,4 @@
+interface:
+  display_name: "娱乐清单"
+  short_description: "整理动画、综艺、电影、剧集和漫画的观看状态与分类清单"
+  default_prompt: "使用 $entertainment-list 把这些作品整理到我的娱乐清单。"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI 小妙招记录"
+  short_description: "整理待体验的 AI 工具、模型和玩法并写入飞书多维表格"
+  default_prompt: "使用 $ai-play-tracker 把这条 AI 玩法整理到飞书待体验清单。"

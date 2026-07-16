@@ -1,0 +1,4 @@
+interface:
+  display_name: "碎片收集"
+  short_description: "整理群聊中的图片、文字和链接碎片并写入飞书多维表格"
+  default_prompt: "使用 $fragment-collector 整理这些图片、文字和链接碎片。"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "飞书文章收集"
+  short_description: "提取微信公众号及网页文章信息并分类整理到飞书多维表格"
+  default_prompt: "使用 $feishu-article-collector 提取这些文章并整理到飞书多维表格。"

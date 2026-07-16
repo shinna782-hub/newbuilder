@@ -1,0 +1,4 @@
+interface:
+  display_name: "图书整理"
+  short_description: "识别实体图书正反面照片信息并整理到飞书多维表格书单"
+  default_prompt: "使用 $book-organizer 识别这些图书照片并整理到飞书书单。"
