@@ -1,6 +1,9 @@
-.env
-.env.*
-!.env.example
+.godot/
 .DS_Store
-__pycache__/
-*.pyc
+*.tmp
+*.log
+export/
+build/
+赛博修仙-演示包/
+演示沙盒/*
+!演示沙盒/.gitkeep

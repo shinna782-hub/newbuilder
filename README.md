@@ -1,38 +1,41 @@
-# shinna-skills
+# 赛博修仙系统
 
-Shinna 制作的实用 Agent Skills。当前仓库以个人工作流验证为主，欢迎阅读、试用和提交改进建议。
+一款把 AI Agent 工作流做成修仙成长体验的 Godot 黑客松作品：玩家在万象宗领取任务，通过“本命法器”ZCode 派发真实 Agent 会话，并在青芜原种植、探索和指挥九尾狐器灵战斗。
 
-## 当前状态
+![项目封面](docs/项目封面.png)
 
-这些 Skills 仍处于早期阶段，接口、字段和工作流可能继续调整。当前暂不创建正式 Release；每次修改都会保留在 Git 提交历史中。达到可复用里程碑后，再发布 `v0.1.0`、`v0.2.0` 等版本。
+## 直接运行
 
-## Skills
+1. 安装 [Godot 4.7](https://godotengine.org/) 或兼容的 Godot 4.x。
+2. 用 Godot 导入仓库根目录的 `project.godot`。
+3. 点击运行项目，或在仓库根目录执行：
 
-| Skill | 用途 | 触发指令 |
-|---|---|---|
-| `ai-play-tracker` | 记录待体验的 AI 工具、模型和玩法 | `小妙招` |
-| `book-organizer` | 从图书照片提取信息并整理实体书单 | `图书整理` |
-| `entertainment-list` | 整理动画、综艺、电影、剧和漫画 | `娱乐` |
-| `feishu-article-collector` | 收集文章并写入飞书多维表格 | `资讯` |
-| `fragment-collector` | 整理图片、文字和链接碎片 | `碎片` |
+```bash
+godot --path .
+```
 
-## 使用前配置
+macOS 可用 `/Applications/Godot.app/Contents/MacOS/Godot --path .`。
 
-1. 选择一个 Skill，先完整阅读其 `SKILL.md`。
-2. 把对应目录安装或复制到 Agent 的共享 Skill 目录。
-3. 按 `.env.example` 配置自己的飞书应用凭据和多维表格标识。
-4. 在飞书开放平台只授予完成工作流必需的最小权限。
-5. 确认自己的多维表格字段名和选项与 Skill 一致，再执行真实写入。
+## 连接 ZCode 法宝桥（可选）
 
-仓库不包含个人飞书文档链接、App Token、Table ID、字段 ID 或密钥。不要把 `.env`、访问令牌或包含个人数据的运行结果提交到 GitHub。
+完整玩法需要 Node.js 22.5+ 和已登录的 ZCode 桌面端：
 
-## 版本管理
+```bash
+ZCODE_WORKSPACE="$PWD/演示沙盒" node 黑客松/法宝桥/bridge.js
+```
 
-- **Commit**：每次修改都会留下作者、时间和差异，可随时比较或恢复历史版本。
-- **Tag**：给一个重要提交加固定版本号，例如 `v0.1.0`。
-- **GitHub Release**：基于 Tag 发布里程碑版本，可附更新说明和安装包。
-- **建议**：早期先频繁提交；当一个 Skill 可以稳定给别人使用时，再创建第一个 `v0.1.0` 预发布版。
+随后在 ZCode 中选择“添加项目 / 打开文件夹”，添加本仓库的 `演示沙盒`。保持法宝桥终端运行，再在游戏任务列表点击“去修炼”。
 
-## License
+## 验收
 
-[MIT](LICENSE)
+```bash
+/Applications/Godot.app/Contents/MacOS/Godot --headless --path . -- --clicktest
+```
+
+自动验收覆盖三段开场 PV、进度跳过与重置、种植/收割、任务列表、地图连通性、器灵工具格以及两回合狐火战斗。
+
+## 公开仓库范围
+
+这里仅包含运行游戏所需的 Godot 工程、法宝桥和部署说明。原始音乐素材包、参考图、美术源文件、私有策划资料、Godot 导入缓存和已导出的 App 均未上传。
+
+首次安装与完整游玩说明见 [docs/第一次安装与游玩指南.md](docs/第一次安装与游玩指南.md)。
