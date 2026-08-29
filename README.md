@@ -4,6 +4,10 @@
 
 ![项目封面](docs/项目封面.png)
 
+## 下载已导出的 macOS App
+
+不安装 Godot 也可以直接体验：[下载黑客松演示版 App（GitHub Release）](https://github.com/shinna782-hub/newbuilder/releases/tag/v1.0.0-hackathon)。下载 ZIP、完整解压后，右键点击“赛博修仙系统.app”并选择“打开”。
+
 ## 直接运行
 
 1. 安装 [Godot 4.7](https://godotengine.org/) 或兼容的 Godot 4.x。
